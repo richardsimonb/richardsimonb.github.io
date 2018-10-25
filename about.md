@@ -3,4 +3,5 @@ layout: default
 title: About
 ---
 
-This page tells you a little bit about me.
+Hello ! My name is Richard Simon Bernhard. I'm a programmer and also a gamer. 
+This site is my portofolio website.
