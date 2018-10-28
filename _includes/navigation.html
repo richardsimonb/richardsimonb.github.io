@@ -1,7 +1,16 @@
 <nav>
-  <ul>
-    {% for item in site.data.navigation %}
-      <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
-    {% endfor %}
-  </ul>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="menu">
+        <li class="menu-text">{{ site.title }}</li>
+      </ul>
+    </div> <!-- /.top-bar-left -->
+    <div class="top-bar-right">
+        <ul class="menu">
+          {% for item in site.data.navigation %}
+            <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+          {% endfor %}
+        </ul>
+    </div> <!-- /.top-bar-right -->
+  </div> <!-- /.top-bar -->
 </nav>
