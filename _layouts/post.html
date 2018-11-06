@@ -1,7 +1,13 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
 
-{{ content }}
+<div class="grid-x grid-padding-x">
+  <div class="large-12 medium-12 cell">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+    
+    {{ content }}
+  </div>
+</div>
+
