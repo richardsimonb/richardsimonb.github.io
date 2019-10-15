@@ -2,7 +2,6 @@ html, body {
    margin:0;
    padding:0;
    height:100%;
-   
 }
 .container {
    min-height:100%;
@@ -21,4 +20,16 @@ html, body {
    bottom:0;
    width:100%;
    height:60px;   /* Height of the footer */
+}
+.introduction {
+   height: 90vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   img {
+      border-radius: 50%;
+      height: 30%;
+      width: auto;
+   }
 }
