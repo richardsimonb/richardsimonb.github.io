@@ -7,17 +7,18 @@
 
     <title>{{ page.title }}</title>
 
-    <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/foundation.css">
-    <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="stylesheet" href="/assets/fonts/foundation-icons/foundation-icons.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    
         
   </head>
   <body>
     
     <div class="container">
       {% include navigation.html %}
-      <div class="grid-container body">
+      <div class="grid-container fluid body">
         {{ content }}
       </div><!-- /.grid-container -->
         

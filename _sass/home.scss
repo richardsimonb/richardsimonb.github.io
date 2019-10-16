@@ -1,35 +1,19 @@
-html, body {
-   margin:0;
-   padding:0;
-   height:100%;
+a{
+   color:black;
 }
-.container {
-   min-height:100%;
-   position:relative;
-   background-color:white
-}
-.header {
-   padding:0px;
-}
-.body {
-   padding:10px;
-   padding-bottom:60px;   /* Height of the footer */
-}
-.footer {
-   position:absolute;
-   bottom:0;
-   width:100%;
-   height:60px;   /* Height of the footer */
-}
-.introduction {
+.introduction, .skill {
    height: 90vh;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
+   background-color:#f8fcfb;
    img {
       border-radius: 50%;
-      height: 30%;
+      height: 40%;
       width: auto;
    }
+}
+.skill{
+   background-color:#c9fdd7;
 }
