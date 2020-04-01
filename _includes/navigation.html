@@ -1,22 +1,37 @@
-<nav class="header">
-  <div class="top-bar">
-    <div class="top-bar-left">
-      <ul class="menu">
-        <li class="menu-text">{{ site.title }}</li>
-        <li class="menu-text">
-          <span data-responsive-toggle="nav-menu" data-hide-for="medium">
-            <button class="menu-icon dark" type="button" data-toggle></button>
-          </span>
-        </li>
-      </ul>
-      
-    </div> <!-- /.top-bar-left -->
-    <div class="top-bar-right" id="nav-menu">
-        <ul class="menu">
-          {% for item in site.data.navigation %}
-            <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
-          {% endfor %}
-        </ul>
-    </div> <!-- /.top-bar-right -->
-  </div> <!-- /.top-bar -->
+<!-- <nav>
+  <div>
+    <ul>
+      {% for item in site.data.navigation %}
+        <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav> -->
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="http://richardsimonb.github.io">
+      richardsimonb
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarTop" class="navbar-menu">
+    <div class="navbar-start">
+      {% for item in site.data.navigation %}
+        <a class="navbar-item" href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+      {% endfor %}
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        
+      </div>
+    </div>
+  </div>
 </nav>

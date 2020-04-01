@@ -7,27 +7,28 @@
 
     <title>{{ page.title }}</title>
 
-    <link rel="stylesheet" href="/assets/css/foundation.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="stylesheet" href="/assets/fonts/foundation-icons/foundation-icons.css">
         
   </head>
   <body>
     
-    <div class="container">
+    <div>
+
       {% include navigation.html %}
-      <div class="grid-container fluid body">
+
+      <div>
+
         {{ content }}
+
       </div><!-- /.grid-container -->
         
-    {% include footer.html %}
+      {% include footer.html %}
+
   </div>
 
-    <script src="/assets/js/vendor/jquery.js"></script>
-    <script src="/assets/js/vendor/what-input.js"></script>
-    <script src="/assets/js/vendor/foundation.min.js"></script>
     <script src="/assets/js/app.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
   </body>
 </html>
