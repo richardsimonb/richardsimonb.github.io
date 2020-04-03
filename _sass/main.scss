@@ -1,3 +1,19 @@
+.current{
+    color: gray;
+  }
+.footer{
+    .icon{
+        vertical-align: middle;
+    }
+    a {
+        color:black;
+    }
+    a :hover{
+        color:grey;
+    }
+}
+
+
 // html, body {
 //   margin:0;
 //   padding:0;
@@ -34,9 +50,7 @@
 //   background-color:#f8fcfb;
 // }
 
-// .current{
-//   color: black;
-// }
+
 
 // .menu-icon.dark{
 //   position: absolute;
