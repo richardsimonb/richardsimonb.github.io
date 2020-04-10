@@ -1,16 +1,6 @@
-<!-- <nav>
-  <div>
-    <ul>
-      {% for item in site.data.navigation %}
-        <li><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
-</nav> -->
-
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="http://richardsimonb.github.io">
+    <a class="navbar-item" href="{{ site.data.navigation[0].link }}">
       richardsimonb
     </a>
 
