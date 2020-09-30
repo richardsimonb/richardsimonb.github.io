@@ -3,6 +3,8 @@ layout: default
 title: Richard Simon | Full-Stack Web Developer
 ---
 
+{% assign lang = site.data.home['id'] %}
+
 <div>
   <section class="hero is-link is-fullheight-with-navbar">
     <div class="hero-body">
@@ -12,9 +14,12 @@ title: Richard Simon | Full-Stack Web Developer
             <div id="myImage">
               <img src="assets/images/richard.jpg">     
             </div>                   
-            <h1 class="title is-2">Hello !</h1>
+            <h1 class="title is-2">
+              {{lang.greet}}
+            </h1>
             <p class="subtitle is-4">
-              {{site.data.home.introduction}}</p>
+              {{lang.introduction}}
+            </p>
           </div>
         </div>        
       </div>
