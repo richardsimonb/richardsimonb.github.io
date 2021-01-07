@@ -1,6 +1,8 @@
 ---
 layout: default
 title: About
+lang: en
+ref: about
 ---
 
 <section class="hero is-large">
