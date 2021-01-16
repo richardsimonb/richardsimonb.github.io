@@ -7,7 +7,7 @@ en:
     link: /en/about
   blog:
     name: Blog
-    link: /blog.html
+    link: /en/blog
 id:
   home:
     name: Beranda
@@ -17,4 +17,4 @@ id:
     link: /id/about
   blog:
     name: Blog
-    link: /blog.html
+    link: /id/blog
