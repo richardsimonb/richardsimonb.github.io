@@ -1,20 +1,20 @@
 en:
   home:
     name: Home
-    link: /en
+    link: /en/
   about:
     name: About
-    link: /en/about
+    link: /en/about/
   blog:
     name: Blog
-    link: /en/blog
+    link: /en/blog/
 id:
   home:
     name: Beranda
-    link: /id
+    link: /id/
   about:
     name: Tentang Saya
-    link: /id/about
+    link: /id/about/
   blog:
     name: Blog
-    link: /id/blog
+    link: /id/blog/
