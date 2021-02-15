@@ -14,7 +14,7 @@
   <div id="navbarTop" class="navbar-menu">
     <div class="navbar-start">
       {% for item in site.data.navigation.[page.lang] %}
-        <a href="{{ item[1].link }}" {% if page.url == item[1].link %}class="navbar-item current"{% else %}class="navbar-item"{% endif %}>{{ item[1].name }}</a>
+        <a href="{{ item[1].link }}" {% if page.url == item[1].link %}class="navbar-item current"{% elsif page.url == "/" and item[1].name == "Home"  %}class="navbar-item current"{% else %}class="navbar-item"{% endif %}>{{ item[1].name }}</a>
       {% endfor %}
     </div>
 
