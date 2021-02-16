@@ -1,1 +1,1 @@
-Hello
+This is my personal website, created using jekyll and bulma.
