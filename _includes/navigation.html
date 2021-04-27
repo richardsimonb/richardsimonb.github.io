@@ -1,27 +1,30 @@
 <nav class="navbar has-text-weight-semibold" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="{{ site.data.navigation.[page.lang].home.link }}">
-      richardsimonb
-    </a>
-
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarTop" class="navbar-menu">
-    <div class="navbar-start">
-      {% for item in site.data.navigation.[page.lang] %}
-        <a href="{{ item[1].link }}" {% if page.url == item[1].link %}class="navbar-item current"{% elsif page.url == "/" and item[1].name == "Home"  %}class="navbar-item current"{% else %}class="navbar-item"{% endif %}>{{ item[1].name }}</a>
-      {% endfor %}
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{ site.data.navigation.[page.lang].home.link }}">
+        richardsimonb
+      </a>
+  
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarTop">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
-
-    <div class="navbar-end">
-      {% for lg in site.data.language %}
-        <a href="{{site.data.navigation.[lg.name].[page.ref].link}}" {% if page.lang == lg.name %}class="navbar-item current"{% else %}class="navbar-item"{% endif %}>{{ lg.name }}</a>
-      {% endfor %}
+  
+    <div id="navbarTop" class="navbar-menu">
+      <div class="navbar-start">
+        {% for item in site.data.navigation.[page.lang] %}
+          <a href="{{ item[1].link }}" {% if page.url == item[1].link %}class="navbar-item current"{% elsif page.url == "/" and item[1].name == "Home"  %}class="navbar-item current"{% else %}class="navbar-item"{% endif %}>{{ item[1].name }}</a>
+        {% endfor %}
+      </div>
+     
+      <div class="navbar-end">
+        {% for lg in site.data.language %}
+          <a href="{{site.data.navigation.[lg.name].[page.ref].link}}" {% if page.lang == lg.name %}class="navbar-item current"{% else %}class="navbar-item"{% endif %}>{{ lg.name }}</a>
+        {% endfor %}
+      </div>
     </div>
   </div>
+  
 </nav>
