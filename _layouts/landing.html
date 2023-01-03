@@ -1,6 +1,5 @@
 ---
 layout: default
-ref: home
 ---
 
 <div>
@@ -15,11 +14,10 @@ ref: home
           </div>
           <div class="column is-8">                   
             <h1 class="title is-2">
-              Halo !
+              {{ page.greetings }}
             </h1>
             <p class="subtitle is-4">
-              Nama saya <strong>Richard Simon</strong>. Saya adalah seorang programmer dari Indonesia. Pekerjaan saya saat ini adalah sebagai full-stack web developer. Selain pengembangan aplikasi web, saya juga tertarik pada pengembangan game dan machine learning.
-            </p>
+              {{ page.short_introduction }}
           </div>
         </div>        
       </div>
@@ -28,8 +26,8 @@ ref: home
   
   <section class="section is-medium" id="myContact">
     <div class="container has-text-centered">
-      <h1 class="title is-2">Butuh sesuatu?</h1>
-      <p class="subtitle is-4">Jangan sungkan untuk menghubungi saya</p>
+      <h1 class="title is-2">{{ page.question }}</h1>
+      <p class="subtitle is-4">{{ page.contact_me }}</p>
       <div class="level">
         <div class="level-item has-text-centered">
             <a href="mailto:richardsimonb@gmail.com">
