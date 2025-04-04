@@ -1,0 +1,139 @@
+---
+import SkillCard from "./SkillCard.astro";
+import WorkCard from "./WorkCard.astro";
+---
+
+<section id="about" class="skills-section">
+    <h1>
+        I am an experienced Full Stack Web Developer, striving to create
+        functional and beautiful web applications.
+    </h1>
+    <div class="skills">
+        <h2>Skills and Technologies</h2>
+        <div class="skills-items">
+            <SkillCard
+                title="Frontend"
+                skills={[
+                    { name: "HTML", icon: "/src/assets/logos/html.svg" },
+                    { name: "CSS", icon: "/src/assets/logos/css.svg" },
+                    {
+                        name: "JavaScript",
+                        icon: "/src/assets/logos/javascript.svg",
+                    },
+                    { name: "React", icon: "/src/assets/logos/react.svg" },
+                    {
+                        name: "Tailwind CSS",
+                        icon: "/src/assets/logos/tailwind.svg",
+                    },
+                ]}
+            />
+            <SkillCard
+                title="Backend"
+                skills={[
+                    { name: "C#", icon: "/src/assets/logos/csharp.svg" },
+                    { name: "PHP", icon: "/src/assets/logos/php.svg" },
+                    {
+                        name: ".Net Core",
+                        icon: "/src/assets/logos/netcore.svg",
+                    },
+                    { name: "Laravel", icon: "/src/assets/logos/laravel.svg" },
+                    { name: "Node.js", icon: "/src/assets/logos/nodejs.svg" },
+                    { name: "Astro.js", icon: "/src/assets/logos/astro.svg" },
+                ]}
+            />
+        </div>
+    </div>
+    
+</section>
+<section id="work" class="work-section">
+    <h2>Work Experiences</h2>
+    <WorkCard
+        title="IT Department"
+        company="Satu Harapan Media"
+        duration="2019 - 2025"
+        description="Developed and maintained news website using PHP. Worked with the Publishing Team to develop the front end. Implemented SEO best practices to improve website visibility."
+    />
+    <WorkCard
+        title="IT Consultant"
+        company="Ministry of Finance of the Republic of Indonesia"
+        duration="2019 - 2020"
+        description="Developed modules for the Ministry of Finance's internal system using C#. Collaborated with the IT team to ensure smooth integration and functionality of the modules."
+    />
+    <WorkCard
+        title="Freelance Programmer"
+        company="Freelance"
+        duration="2016 - Now"
+        description="Developed various web applications. Worked on projects ranging from small business websites, individual projects, and personal projects. Gained experience in different technologies and frameworks."
+    />
+</section>
+    
+
+
+<style>
+    .skills-section {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--secondary-color);
+        color: white;
+    }
+    .work-section {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--secondary-color);
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .skills-items {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .skills {
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        margin-top: 10%;
+        font-size: 2rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        padding: 0;
+        text-align: left;
+    }
+
+    h2 {
+        margin-top: 2%;
+        font-size: 1.65rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .skills-section {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            max-width: 40%;
+            margin-top: 0;
+        }
+        .skills {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            max-width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>

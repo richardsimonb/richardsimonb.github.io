@@ -1,0 +1,12 @@
+:root {
+    --primary-color: #3282B8;
+    --secondary-color: #0F4C75;
+    --background-color: #1B262C;
+    --light-color: #BBE1FA;
+}
+
+html{
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+

@@ -1,0 +1,59 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+        <ProjectCard
+            title="Satuharapan"
+            description="satuharapan.com is a news website based in Indonesia. Developed and maintained the content management system, server and the front end."
+            link="https://satuharapan.com"
+            tags={["PHP", "Laravel", "ReactJS", "Website", "Web Application"]}
+        />
+        <ProjectCard
+            title="Kata Hasta Pustaka"
+            description="Kata Hasta Pustaka is a book publishing company. Helped build and host the company website."
+            link="https://katahastapustaka.com"
+            tags={["Astro.js", "Tailwind CSS", "Website"]}
+        />
+        <ProjectCard
+            title="GRMS"
+            description="Government Resources Management System is internal system in General Inspectorate of Ministry of Finance of Indonesia. Developed three modules which used in payment, finances, and monitoring in the internal department."
+            link=""
+            tags={["C#", ".NET Core", "Web Application"]}
+        />
+        <ProjectCard
+            title="Personal Website"
+            description="This website is my personal portfolio. Built using Astro.js."
+            link=""
+            tags={["Astro.JS", "Website"]}
+        />
+    </div>
+</section>
+
+<style>
+    .projects {
+        padding: 2rem;
+        background-color: var(--secondary-color);
+    }
+    h2 {
+        margin-left: 10%;
+        margin-bottom: 1.5rem;
+        font-size: 4rem;
+        font-style: italic;
+        color: white;
+    }
+    .project-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+    @media screen and (min-width: 992px) {
+        .project-list {
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+</style>
