@@ -1,16 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
-import Landing from '../components/Landing.astro';
-import Skills from '../components/Skills.astro';
-import Projects from '../components/Projects.astro';
-import Contact from '../components/Contact.astro';
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Landing from "../components/Landing.astro";
+import Skills from "../components/Skills.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
 ---
 
-<Layout>
+<Layout title="Richard Simon | Full Stack Developer" 
+	description="Richard Simon is a full stack web developer with a passion for creating dynamic and responsive web applications.">
 	<Navigation />
-	<Landing />
-	<Skills />
-	<Projects />
-	<Contact />
+	<main>
+		<Landing />
+		<Skills />
+		<Projects />
+		<Contact />
+	</main>
 </Layout>
