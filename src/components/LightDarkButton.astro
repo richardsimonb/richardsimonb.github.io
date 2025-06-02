@@ -1,0 +1,21 @@
+---
+
+---
+
+<button data-set-theme="light">Light</button>
+<button data-set-theme="dark">Dark</button>
+
+<script>
+    const lightButton = document.querySelector(`[data-set-theme='light']`);
+    const darkButton = document.querySelector(`[data-set-theme='dark']`);
+    const html = document.querySelector("html");
+
+    function switchMode(mode: "light" | "dark" | "auto") {
+        html?.style.setProperty(
+            "color-scheme",
+            mode === "auto" ? "light dark" : mode,
+        );
+    }
+    lightButton?.addEventListener("click", () => switchMode("light"));
+    darkButton?.addEventListener("click", () => switchMode("dark"));
+</script>
