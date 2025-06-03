@@ -1,12 +1,19 @@
 :root {
-    --primary-color: #3282B8;
-    --secondary-color: #0F4C75;
-    --background-color: #1B262C;
-    --light-color: #BBE1FA;
+    --primary-color: light-dark(#09326C, #CCE0FF);
+    --secondary-color: #6c4309;
+    --background-color: light-dark(#ffffff, #161A1D)
+    --neutral-color: light-dark(#F1F2F4, #22272B);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 html{
+    box-sizing: border-box;
+    color-scheme: light dark;
     font-size: 1rem;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
 }
 
