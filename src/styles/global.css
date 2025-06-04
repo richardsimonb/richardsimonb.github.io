@@ -1,12 +1,17 @@
 :root {
-    --primary-color: light-dark(#09326C, #CCE0FF);
+    --primary-color: light-dark(#CCE0FF, #09326C);
+    --inverted-primary-color: light-dark(#09326C, #CCE0FF);
     --secondary-color: #6c4309;
-    --background-color: light-dark(#ffffff, #161A1D)
-    --neutral-color: light-dark(#F1F2F4, #22272B);
+    --background-color: light-dark(#ffffff, #161A1D);
+    --neutral-color: light-dark(#DCDFE4, #2C333A);
+    --text-color: light-dark(#000000, #FFFFFF);
+    --inverted-text-color: light-dark(#FFFFFF, #000000);
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 html{
