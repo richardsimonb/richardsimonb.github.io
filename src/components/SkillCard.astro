@@ -2,15 +2,13 @@
 import CardIcon from "./CardIcon.astro";
 
 export interface Props {
-    title: string;
     skills: { name: string; icon: string }[];
 }
 
-const { title, skills } = Astro.props;
+const { skills } = Astro.props;
 ---
 
 <div class="skill-card">
-    <h2 class="skill-card-title">{title}</h2>
     <ul class="skill-card-list">
         {
             skills.map((skill) => (
@@ -25,27 +23,13 @@ const { title, skills } = Astro.props;
 </div>
 
 <style>
-    .skill-card {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 16px;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        min-width: 160px;
-        min-height: 240px;
-        margin-bottom: 20px;
-    }
-
-    .skill-card-title {
-        font-size: 1.5rem;
-        margin-top: 0;
-        margin-bottom: 12px;
-        color: #333;
-    }
-
     .skill-card-list {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.2rem;
         list-style: none;
         padding: 0;
-        margin: 0;
     }
 </style>

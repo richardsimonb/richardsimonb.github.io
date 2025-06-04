@@ -4,53 +4,53 @@ import WorkCard from "./WorkCard.astro";
 ---
 
 <section id="about" class="skills-section">
-    <h1>
-        I am an experienced Full Stack Web Developer, striving to create
-        functional and beautiful web applications.
-    </h1>
-    <div class="skills">
-        <h2>Skills and Technologies</h2>
-        <div class="skills-items">
-            <SkillCard
-                title="Frontend"
-                skills={[
-                    { name: "HTML", icon: "/src/assets/logos/html.svg" },
-                    { name: "CSS", icon: "/src/assets/logos/css.svg" },
-                    {
-                        name: "JavaScript",
-                        icon: "/src/assets/logos/javascript.svg",
-                    },
-                    { name: "React", icon: "/src/assets/logos/react.svg" },
-                    {
-                        name: "Tailwind CSS",
-                        icon: "/src/assets/logos/tailwind.svg",
-                    },
-                ]}
-            />
-            <SkillCard
-                title="Backend"
-                skills={[
-                    { name: "C#", icon: "/src/assets/logos/csharp.svg" },
-                    { name: "PHP", icon: "/src/assets/logos/php.svg" },
-                    {
-                        name: ".Net Core",
-                        icon: "/src/assets/logos/netcore.svg",
-                    },
-                    { name: "Laravel", icon: "/src/assets/logos/laravel.svg" },
-                    { name: "Node.js", icon: "/src/assets/logos/nodejs.svg" },
-                    { name: "Astro.js", icon: "/src/assets/logos/astro.svg" },
-                ]}
-            />
-        </div>
+    <div class="aboutme">
+        <h2>What I Do</h2>
+        <p>
+            I am a full-stack web developer with a passion for creating dynamic
+            and responsive web applications.
+        </p>
+        <p>
+            My experience in frontend is building using React and Tailwind CSS.
+            On the backend, I expertise in PHP with Laravel framework and
+            Node.js with multiple frameworks. I also have experience in
+            developing using C# and .Net Core.
+        </p>
     </div>
-    
+
+    <div class="skills">
+        <SkillCard
+            skills={[
+                { name: "HTML", icon: "/src/assets/logos/html.svg" },
+                { name: "CSS", icon: "/src/assets/logos/css.svg" },
+                {
+                    name: "JavaScript",
+                    icon: "/src/assets/logos/javascript.svg",
+                },
+                { name: "React", icon: "/src/assets/logos/react.svg" },
+                {
+                    name: "Tailwind CSS",
+                    icon: "/src/assets/logos/tailwind.svg",
+                },
+                { name: "C#", icon: "/src/assets/logos/csharp.svg" },
+                { name: "PHP", icon: "/src/assets/logos/php.svg" },
+                {
+                    name: ".Net Core",
+                    icon: "/src/assets/logos/netcore.svg",
+                },
+                { name: "Laravel", icon: "/src/assets/logos/laravel.svg" },
+                { name: "Node.js", icon: "/src/assets/logos/nodejs.svg" },
+                { name: "Astro.js", icon: "/src/assets/logos/astro.svg" },
+            ]}
+        />
+    </div>
 </section>
 <section id="work" class="work-section">
     <h2>Work Experiences</h2>
     <WorkCard
         title="IT Department"
         company="Satu Harapan Media"
-        duration="2019 - 2025"
+        duration="2020 - 2025"
         description="Developed and maintained news website using PHP. Worked with the Publishing Team to develop the front end. Implemented SEO best practices to improve website visibility."
     />
     <WorkCard
@@ -62,78 +62,51 @@ import WorkCard from "./WorkCard.astro";
     <WorkCard
         title="Freelance Programmer"
         company="Freelance"
-        duration="2016 - Now"
+        duration="2016 - 2019"
         description="Developed various web applications. Worked on projects ranging from small business websites, individual projects, and personal projects. Gained experience in different technologies and frameworks."
     />
 </section>
-    
-
 
 <style>
     .skills-section {
-        height: auto;
-        width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        background-color: var(--secondary-color);
-        color: white;
+        padding: 0px 30px;
     }
     .work-section {
-        height: auto;
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: var(--secondary-color);
-        color: white;
         margin-left: auto;
         margin-right: auto;
     }
-    .skills-items {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        gap: 2rem;
-    }
     .skills {
+        width: 100%;
         margin-bottom: 30px;
     }
 
-    h1 {
-        margin-top: 10%;
+    h2 {
+        text-align: center;
         font-size: 2rem;
-        margin-left: 2rem;
-        margin-bottom: 1rem;
-        padding: 0;
-        text-align: left;
     }
 
-    h2 {
-        margin-top: 2%;
-        font-size: 1.65rem;
-        margin-bottom: 2rem;
-        text-align: center;
+    p {
+        text-align: left;
+        font-size: 1.25rem;
+        margin-bottom: 20px;
     }
 
     @media only screen and (min-width: 992px) {
         .skills-section {
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        h1 {
-            max-width: 40%;
-            margin-top: 0;
+        .aboutme {
+            width: 900px;
         }
         .skills {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            max-width: 60%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 900px;
         }
     }
 </style>
