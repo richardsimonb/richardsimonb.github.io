@@ -1,13 +1,25 @@
----
+<button data-set-theme="light" class="hidden">Light</button>
+<button data-set-theme="dark" class="hidden">Dark</button>
+<button data-set-theme="auto">Auto</button>
 
----
-
-<button data-set-theme="light">Light</button>
-<button data-set-theme="dark">Dark</button>
+<style>
+    button {
+        background: transparent;
+        border: none;
+        font-weight: bold;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+        cursor: pointer;
+    }
+    .hidden {
+        display: none;
+    }
+</style>
 
 <script>
     const lightButton = document.querySelector(`[data-set-theme='light']`);
     const darkButton = document.querySelector(`[data-set-theme='dark']`);
+    const autoButton = document.querySelector(`[data-set-theme='auto']`);
     const html = document.querySelector("html");
 
     function switchMode(mode: "light" | "dark" | "auto") {
@@ -15,7 +27,26 @@
             "color-scheme",
             mode === "auto" ? "light dark" : mode,
         );
+        switch (mode) {
+            case "light":
+                lightButton?.classList.add("hidden");
+                darkButton?.classList.remove("hidden");
+                autoButton?.classList.add("hidden");
+                break;
+            case "dark":
+                lightButton?.classList.add("hidden");
+                darkButton?.classList.add("hidden");
+                autoButton?.classList.remove("hidden");
+                break;
+            case "auto":
+                lightButton?.classList.remove("hidden");
+                darkButton?.classList.add("hidden");
+                autoButton?.classList.add("hidden");
+                break;
+        }
     }
+
     lightButton?.addEventListener("click", () => switchMode("light"));
     darkButton?.addEventListener("click", () => switchMode("dark"));
+    autoButton?.addEventListener("click", () => switchMode("auto"));
 </script>
