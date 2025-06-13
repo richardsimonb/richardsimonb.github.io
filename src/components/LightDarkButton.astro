@@ -1,6 +1,7 @@
 <div class="theme">
-    <button id="show">Theme</button>
-    <div id="theme-dropdown">
+    <a class="theme-button">Theme</a>
+    <!-- <button id="show">Theme</button> -->
+    <div class="theme-dropdown">
         <button data-set-theme="auto" disabled>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -88,21 +89,10 @@
         gap: 0.2rem;
         height: 1.5rem;
     }
-    button:disabled svg{
+    button:disabled svg {
         fill: gray;
     }
-    .hidden {
-        display: none;
-    }
-
-    #show {
-        border-radius: 5px;
-    }
-    .pressed {
-        background-color: var(--primary-color);
-        
-    }
-    #theme-dropdown {
+    .theme-dropdown {
         position: absolute;
         display: none;
         flex-direction: column;
@@ -112,14 +102,27 @@
         background-color: var(--neutral-color);
         border-radius: 10px;
     }
+
+    a {
+        text-decoration: none;
+        font-size: 1em;
+        color: var(--text-color);
+        padding: 15px;
+    }
+    a:hover,
+    .theme:hover .theme-button {
+        background-color: var(--primary-color);
+    }
+
+    .theme:hover .theme-dropdown {
+        display: flex;
+    }
 </style>
 
 <script>
-    const dropdown = document.getElementById("theme-dropdown");
     const lightButton = document.querySelector(`[data-set-theme='light']`);
     const darkButton = document.querySelector(`[data-set-theme='dark']`);
     const autoButton = document.querySelector(`[data-set-theme='auto']`);
-    const showButton = document.querySelector("#show");
     const html = document.querySelector("html");
 
     function switchMode(mode: "light" | "dark" | "auto") {
@@ -127,7 +130,7 @@
             "color-scheme",
             mode === "auto" ? "light dark" : mode,
         );
-        switch(mode) {
+        switch (mode) {
             case "light":
                 lightButton?.setAttribute("disabled", "true");
                 darkButton?.removeAttribute("disabled");
@@ -145,32 +148,8 @@
                 break;
         }
     }
-    function showButtons() {
-        dropdown!.style.display = "flex";
-        showButton?.classList.add("pressed");
-        showButton?.removeEventListener("click", () => {
-            showButtons();
-        });
-        showButton?.addEventListener("click", () => {
-            hideButtons();
-        });
-    }
-    function hideButtons() {
-        dropdown!.style.display = "none";
-        showButton?.classList.remove("pressed");
-        showButton?.removeEventListener("click", () => {
-            hideButtons();
-        });
-        showButton?.addEventListener("click", () => {
-            showButtons();
-        });
-    }
 
     lightButton?.addEventListener("click", () => switchMode("light"));
     darkButton?.addEventListener("click", () => switchMode("dark"));
     autoButton?.addEventListener("click", () => switchMode("auto"));
-
-    showButton?.addEventListener("click", () => {
-        showButtons();
-    });
 </script>
