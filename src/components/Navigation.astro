@@ -3,9 +3,9 @@ import LightDarkButton from "./LightDarkButton.astro"
 ---
 <nav>
     <div class="links">
-        <a href="/#about">About</a>
-        <a href="/#projects">Projects</a>
-        <a href="/#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
         <LightDarkButton />
     </div>
 </nav>
@@ -41,5 +41,35 @@ import LightDarkButton from "./LightDarkButton.astro"
     a:hover {
         background-color: var(--primary-color);
     }
+    .active {
+        background-color: var(--primary-color);
+    }
 
 </style>
+
+<script>
+    const sections = document.querySelectorAll("section[id]");
+    const observer = new IntersectionObserver( 
+        (entries) => {
+            entries.forEach((entry) => {
+                const id = entry.target.getAttribute("id");
+                const link = document.querySelector(`nav a[href="#${id}"]`);
+                if (entry.isIntersecting) {
+                    link?.classList.add("active");
+                    console.log(`Section ${id} is active`);
+                } else {
+                    link?.classList.remove("active");
+                    console.log(`Section ${id} is inactive`);
+                }
+            });
+        },
+        {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.5,
+        }
+    );
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
+</script>
