@@ -1,6 +1,7 @@
 ---
-import LightDarkButton from "./LightDarkButton.astro"
+import LightDarkButton from "./LightDarkButton.astro";
 ---
+
 <nav>
     <div class="links">
         <a href="#about">About</a>
@@ -44,30 +45,36 @@ import LightDarkButton from "./LightDarkButton.astro"
     .active {
         background-color: var(--primary-color);
     }
-
 </style>
 
 <script>
     const sections = document.querySelectorAll("section[id]");
-    const observer = new IntersectionObserver( 
+    const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
                 const id = entry.target.getAttribute("id");
                 const link = document.querySelector(`nav a[href="#${id}"]`);
                 if (entry.isIntersecting) {
                     link?.classList.add("active");
-                    console.log(`Section ${id} is active`);
+                    const otherSections = Array.from(sections).filter(
+                        (section) => section.id !== id,
+                    );
+                    otherSections.forEach((otherSection) => {
+                        const otherLink = document.querySelector(
+                            `nav a[href="#${otherSection.id}"]`,
+                        );
+                        otherLink?.classList.remove("active");
+                    });
                 } else {
                     link?.classList.remove("active");
-                    console.log(`Section ${id} is inactive`);
                 }
             });
         },
         {
             root: null,
             rootMargin: "0px",
-            threshold: 0.5,
-        }
+            threshold: [0.2],
+        },
     );
     sections.forEach((section) => {
         observer.observe(section);

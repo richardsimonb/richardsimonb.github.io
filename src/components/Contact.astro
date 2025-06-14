@@ -20,7 +20,7 @@ import { Image } from "astro:assets";
                 alt="LinkedIn Logo"
                 width={40}
                 height={40}
-                class="logo"
+                class="logo linkedin-logo"
             />
             <a
                 href="https://www.linkedin.com/in/richardsimonb"
@@ -36,7 +36,7 @@ import { Image } from "astro:assets";
                 alt="GitHub Logo"
                 width={40}
                 height={40}
-                class="logo"
+                class="logo github-logo"
             />
             <a
                 href="https://github.com/richardsimonb"
@@ -51,8 +51,8 @@ import { Image } from "astro:assets";
                 src={Email}
                 alt="Email Logo"
                 width={40}
-                height={40}
-                class="logo"
+                height={30}
+                class="logo email-logo"
             />
             <a href="mailto:richardsimonb@gmail.com"> Email </a>
         </li>
@@ -61,8 +61,8 @@ import { Image } from "astro:assets";
 
 <style>
     .contact-section {
-        margin: 0;
         padding-top: 10%;
+        padding-bottom: 10%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -112,22 +112,28 @@ import { Image } from "astro:assets";
         font-size: 1.5rem;
         color: var(--text-color);
     }
-    
-    img{
-        background-color: #161A1D;
+
+    img {
+        background-color: #161a1d;
         padding: 2px;
         border-radius: 10px;
     }
 
+    .github-logo {
+        border-radius: 20px;
+    }
+    .email-logo {
+        border-radius: 5px;
+        padding: 0px;
+    }
+
     @media screen and (min-width: 992px) {
-        .contact-links{
+        .contact-links {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
             gap: 30%;
-
         }
-        
     }
 </style>

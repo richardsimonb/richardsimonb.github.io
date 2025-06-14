@@ -7,13 +7,19 @@ import Projects from "../components/Projects.astro";
 import Contact from "../components/Contact.astro";
 ---
 
-<Layout title="Richard Simon | Full Stack Developer" 
-	description="Richard Simon is a full stack web developer with a passion for creating dynamic and responsive web applications.">
-	<Navigation />
-	<main>
-		<Landing />
-		<Skills />
-		<Projects />
-		<Contact />
-	</main>
+<Layout
+	title="Richard Simon | Full Stack Developer"
+	description="Richard Simon is a full stack web developer with a passion for creating dynamic and responsive web applications."
+>
+	<>
+		<header>
+			<Navigation />
+		</header>
+		<main>
+			<Landing />
+			<Skills />
+			<Projects />
+			<Contact />
+		</main>
+	</>
 </Layout>
