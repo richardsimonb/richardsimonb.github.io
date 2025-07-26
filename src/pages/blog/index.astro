@@ -1,0 +1,29 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+    title="Blog | Richard Simon"
+    description="Explore the latest articles and insights from Richard Simon, a full stack web developer."
+>
+    <main>
+        <h1>My Blog</h1>
+    </main>
+    <style>
+        main {
+            padding: 20px;
+        }
+        h1{
+            font-size: 3 rem;
+        }
+        @media only screen and (min-width: 992px) {
+            main{
+                width: 900px;
+                margin: 0 auto;
+            }
+            h1 {
+                font-size: 5rem;
+            }
+        }
+    </style>
+</Layout>
