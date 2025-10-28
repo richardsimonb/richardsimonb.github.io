@@ -7,7 +7,7 @@ import LightDarkButton from "./LightDarkButton.astro";
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <a href="/blog">Blog</a>
+        <!-- <a href="/blog">Blog</a> -->
         <LightDarkButton />
     </div>
 </nav>
@@ -38,13 +38,12 @@ import LightDarkButton from "./LightDarkButton.astro";
         font-size: 1em;
         color: var(--text-color);
         padding: 15px;
-    }
-
-    a:hover {
-        background-color: var(--primary-color);
-    }
-    .active {
-        background-color: var(--primary-color);
+        &:hover {
+            background-color: var(--primary-color);
+        }
+        &.active {
+            background-color: var(--primary-color);
+        }
     }
 </style>
 
@@ -52,7 +51,7 @@ import LightDarkButton from "./LightDarkButton.astro";
     const links = document.querySelectorAll(`nav a[href^="#"]`);
     links.forEach((link) => {
     
-        link.addEventListener("click", (event) => {
+        link.addEventListener("click tap", (event) => {
             event.preventDefault();
             const targetId = link.getAttribute("href")?.substring(1);
             const targetSection = document.getElementById(targetId? targetId : "");
