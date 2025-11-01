@@ -39,20 +39,34 @@
         text-align: center;
         line-height: 80%;
         color: var(--inverted-primary-color);
+        @media only screen and ((min-width: 992px)) {
+            font-size: 10rem;
+            text-align: left;
+        }
     }
     h2 {
         margin-top: 0;
         font-size: 1.9rem;
         text-align: center;
+        @media only screen and ((min-width: 992px)) {
+            font-size: 4rem;
+            text-align: left;
+            padding-left: 6px;
+        }
     }
     .container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 100dvh;
         max-width: 100%;
         gap: 0px;
+        @media only screen and ((min-width: 992px)) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
     }
     rect:hover {
         fill: white;
@@ -62,26 +76,10 @@
         display: flex;
         flex-direction: column;
         align-items: left;
-    }
-
-    @media only screen and (min-width: 992px) {
-        h1 {
-            font-size: 10rem;
-            text-align: left;
-        }
-        h2 {
-            font-size: 4rem;
-            text-align: left;
-            padding-left: 6px;
-        }
-        .container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
-        .text {
+        @media only screen and ((min-width: 992px)) {
             justify-content: stretch;
             margin-left: 50px;
         }
     }
+
 </style>
