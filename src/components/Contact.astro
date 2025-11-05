@@ -96,21 +96,26 @@ import { Image } from "astro:assets";
         list-style: none;
         padding: 0;
         margin: 1rem 0 0;
-    }
-
-    .contact-links li {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        margin: 0.5rem 0;
-        margin-bottom: 20%;
-    }
-
-    .contact-links a {
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1.5rem;
-        color: var(--text-color);
+        li {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 0.5rem 0;
+            margin-bottom: 20%;
+        }
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--text-color);
+        }
+        @media screen and ((min-width: 992px)) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 30%;
+        }
     }
 
     img {
@@ -125,15 +130,5 @@ import { Image } from "astro:assets";
     .email-logo {
         border-radius: 5px;
         padding: 0px;
-    }
-
-    @media screen and (min-width: 992px) {
-        .contact-links {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 30%;
-        }
     }
 </style>
