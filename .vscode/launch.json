@@ -6,6 +6,20 @@
       "name": "Development server",
       "request": "launch",
       "type": "node-terminal"
+    },
+    {
+      "name": "Launch localhost",
+      "type": "firefox",
+      "request": "launch",
+      "reAttach": true,
+      "url": "http://localhost:4321",
+      "webRoot": "${workspaceFolder}"
+    },
+  ],
+  "compounds": [
+    {
+      "name": "Start server and browser",
+      "configurations": ["Development server", "Launch localhost"]
     }
   ]
 }
