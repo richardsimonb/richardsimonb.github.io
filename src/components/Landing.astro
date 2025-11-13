@@ -1,6 +1,6 @@
 <section class="container">
     <svg viewBox="0 0 320 430" xmlns="http://www.w3.org/2000/svg">
-        <g fill="var(--inverted-primary-color)">
+        <g>
             <rect width="100" height="100" x="0" y="0" rx="20" ry="20"></rect>
             <rect width="100" height="100" x="110" y="0" rx="20" ry="20"></rect>
             <rect width="100" height="100" x="0" y="110" rx="20" ry="20"></rect>
@@ -64,23 +64,47 @@
     }
 
     rect {
+        transition: fill 0.5s ease;
+        fill: var(--inverted-primary-color);
         &:nth-child(odd) {
-            animation-name: white-to-primary, primary-to-white;
+            animation-name: shape-shift;
             animation-duration: 3s;
             animation-iteration-count: infinite;
-            animation-direction: alternate;
+            animation-direction: forwards;
+            animation-timing-function: ease-in-out;
         }
 
         &:nth-child(even) {
-            animation-name: white-to-primary, primary-to-white;
+            animation-name: shape-shift;
             animation-duration: 6s;
             animation-iteration-count: infinite;
-            animation-direction: alternate;
+            animation-direction: forwards;
+            animation-timing-function: ease-in-out;
         }
         /* &:hover {
             fill: white;
             transition: fill 0.5s ease;
         } */
+    }
+
+    @keyframes shape-shift {
+        0% {
+            transform-box: fill-box;
+            transform: scale(100%);
+            transform-origin: center center;
+        }
+
+        50% {
+            transform-box: fill-box;
+            transform: scale(90%);
+            transform-origin: center center;
+        }
+
+        100% {
+            transform-box: fill-box;
+            transform: scale(100%);
+            transform-origin: center center;
+        }
     }
     .text {
         display: flex;
@@ -89,26 +113,6 @@
         @media only screen and ((min-width: 992px)) {
             justify-content: stretch;
             margin-left: 50px;
-        }
-    }
-
-    @keyframes primary-to-white {
-        0% {
-            fill: var(--inverted-primary-color);
-        }
-
-        100% {
-            fill: white;
-        }
-    }
-
-    @keyframes white-to-primary {
-        0% {
-            fill: white;
-        }
-
-        100% {
-            fill: var(--inverted-primary-color);
         }
     }
 </style>
