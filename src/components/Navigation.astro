@@ -51,7 +51,7 @@ import LightDarkButton from "./LightDarkButton.astro";
     const links = document.querySelectorAll(`nav a[href^="#"]`);
     links.forEach((link) => {
         link.addEventListener(
-            "click touchstart",
+            "click",
             (event) => {
                 event.preventDefault();
                 const targetId = link.getAttribute("href")?.substring(1);
