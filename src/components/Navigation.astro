@@ -50,20 +50,25 @@ import LightDarkButton from "./LightDarkButton.astro";
 <script>
     const links = document.querySelectorAll(`nav a[href^="#"]`);
     links.forEach((link) => {
-    
-        link.addEventListener("click tap", (event) => {
-            event.preventDefault();
-            const targetId = link.getAttribute("href")?.substring(1);
-            const targetSection = document.getElementById(targetId? targetId : "");
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                });
-            }
-            links.forEach((l) => l.classList.remove("active"));
-            link.classList.add("active");
-        });
+        link.addEventListener(
+            "click touchstart",
+            (event) => {
+                event.preventDefault();
+                const targetId = link.getAttribute("href")?.substring(1);
+                const targetSection = document.getElementById(
+                    targetId ? targetId : "",
+                );
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                    });
+                }
+                links.forEach((l) => l.classList.remove("active"));
+                link.classList.add("active");
+            },
+            { passive: false },
+        );
     });
 
     const sections = document.querySelectorAll("section[id]");
@@ -97,5 +102,4 @@ import LightDarkButton from "./LightDarkButton.astro";
     sections.forEach((section) => {
         observer.observe(section);
     });
-    
 </script>
