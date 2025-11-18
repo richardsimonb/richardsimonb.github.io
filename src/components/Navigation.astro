@@ -48,7 +48,7 @@ import LightDarkButton from "./LightDarkButton.astro";
 </style>
 
 <script>
-    const links = document.querySelectorAll(`nav a[href^="#"]`);
+    const links = document.querySelectorAll(`a[href^="#"]`);
     links.forEach((link) => {
         link.addEventListener("click", (event) => {
             event.preventDefault();
@@ -69,6 +69,8 @@ import LightDarkButton from "./LightDarkButton.astro";
             "touchstart",
             (event) => {
                 event.preventDefault();
+                let element = link as HTMLElement;
+                element.click();
             },
             { passive: false },
         );
@@ -79,7 +81,7 @@ import LightDarkButton from "./LightDarkButton.astro";
         (entries) => {
             entries.forEach((entry) => {
                 const id = entry.target.getAttribute("id");
-                const link = document.querySelector(`nav a[href="#${id}"]`);
+                const link = document.querySelector(`a[href="#${id}"]`);
                 if (entry.isIntersecting) {
                     link?.classList.add("active");
                     const otherSections = Array.from(sections).filter(
