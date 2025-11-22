@@ -88,9 +88,9 @@
         align-items: center;
         gap: 0.2rem;
         height: 1.5rem;
-    }
-    button:disabled svg {
-        fill: gray;
+        &:disabled svg {
+            fill: gray;
+        }
     }
     .theme-dropdown {
         position: absolute;
@@ -112,13 +112,16 @@
             background-color: var(--primary-color);
         }
     }
-    
-    .theme:hover .theme-button {
-        background-color: var(--primary-color);
-    }
 
-    .theme:hover .theme-dropdown {
-        display: flex;
+    .theme {
+        &:hover {
+            .theme-button {
+                background-color: var(--primary-color);
+            }
+            .theme-dropdown{
+                display: flex;
+            }
+        }
     }
 </style>
 
