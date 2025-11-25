@@ -24,16 +24,16 @@ const { title, description, link, tags } = Astro.props;
         border: 1px solid;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .project-card h3 {
-        margin: 0 0 0.5rem;
-    }
-    .project-card a {
-        text-decoration: none;
-        color: var(--inverted-primary-color);
-    }
-    .project-card a:hover {
-        text-decoration: underline;
+        h3 {
+            margin: 0 0 0.5rem;
+        }
+        a {
+            text-decoration: none;
+            color: var(--inverted-primary-color);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     .tags {
         margin-top: 0.5rem;
