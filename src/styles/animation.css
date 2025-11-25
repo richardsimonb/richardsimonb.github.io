@@ -1,0 +1,13 @@
+@keyframes pulse {
+    0% {
+        transform-box: fill-box;
+        transform: var(--pulse-scale-from, scale(100%));
+        transform-origin: center center;
+    }
+
+    100% {
+        transform-box: fill-box;
+        transform: var(--pulse-scale-to, scale(90%));
+        transform-origin: center center;
+    }
+}
