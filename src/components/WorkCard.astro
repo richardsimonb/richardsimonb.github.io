@@ -20,9 +20,12 @@ const { title, company, duration, description } = Astro.props as Props;
 <style>
     .work-card {
         max-width: 90%;
-        padding: 16px;
+        padding: 10px;
         margin-bottom: 20px;
         border-bottom: 2px groove var(--primary-color);
+        @media only screen and (min-width: 992px) {
+           width: 900px;
+        }
     }
 
     .work-title {
@@ -43,11 +46,5 @@ const { title, company, duration, description } = Astro.props as Props;
 
     .work-description {
         font-size: 1rem;
-    }
-
-    @media only screen and (min-width: 992px) {
-        .work-card {
-            width: 900px;
-        }
     }
 </style>
